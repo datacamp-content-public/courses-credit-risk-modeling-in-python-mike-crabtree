@@ -103,7 +103,7 @@ key: "2166e7d1ab"
 
 
 `@script`
-
+Last, but not least, is the random state parameter.  This is an integer used as a seed for the pseudo random shuffling of the data prior to fitting.  This is not generally used for the lbfgs solver, but it gives us an opportunity to play with searching through more values using gridsearch.
 
 
 ---
@@ -116,17 +116,19 @@ code_zoom: 85
 ```
 
 `@part1`
-Here is some text
-
+- Exhaustive search over a dictionary of parameters
+- Implements `fit` and `score` from Scikit Learn
+- Imported from `model_selection`
 ```python
-import numpy as np
 from sklearn.model_selection import GridSearchCV
 ```
-Here is some more text
 
 
 `@script`
-
+I've mentioned grid search several times now, but what exactly is it?
+Grid search is a method within Scikit learn which allows us to pass in a machine learning model as well as a dictionary of parameters to figure out which combination works best.
+It is able to do so, because grid search will implement both a fit and score method.
+The grid search method is generally brought in my importing model selection from scikit learn.
 
 
 ---
@@ -161,7 +163,9 @@ hyperparameters = dict(C = C
 
 
 `@script`
-
+Now, the first thing I like to do is create some simple arrays of the different values I want grid search to choose from.
+Here, I have created some simple ones for each of the parameters we are going to use: c, max iter, and random state.  One fun thing to note is when establishing a range of c values, it's easy to use the logspace function from numpy to generate evenly spaced values in the log space.
+Once all of those are created, we can then create our dictionary of hyperparameters to use in our grid search.
 
 
 ---
