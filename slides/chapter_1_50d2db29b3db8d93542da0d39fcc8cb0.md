@@ -17,7 +17,9 @@ title: Data Scientist, Ford Motor Company
 
 
 `@script`
-
+In the previous exercises, we used a logistic regression to compute probability of default and analyzed the performance.
+We set some of the hyperparameters to specific values, but what if we want to try a range of different values?
+That's where gridsearch comes into play!
 
 
 ---
@@ -29,14 +31,15 @@ key: "8dc2d60288"
 ```
 
 `@part1`
-Some examples
+Previously used hyperparameters:
 - C : Inverse of the regularization strength
 - max_iter : Maximum number of iterations taken
 - random_state : Seed of the RNG for shuffling
 
 
 `@script`
-
+While not all hyperparameters are good candidates for grid search, we can use a set of simple ones to help us optimize the performance of our model.
+For the next set of exercises we will be using the following hyperparameters.
 
 
 ---
