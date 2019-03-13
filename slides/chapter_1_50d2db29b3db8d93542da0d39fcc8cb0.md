@@ -29,7 +29,10 @@ key: "8dc2d60288"
 ```
 
 `@part1`
-
+Some examples
+- C : Inverse of the regularization strength
+- max_iter : Maximum number of iterations taken
+- random_state : Seed of the RNG for shuffling
 
 
 `@script`
@@ -37,7 +40,7 @@ key: "8dc2d60288"
 
 
 ---
-## What is GridSearch?
+## What is GridSearchCV?
 
 ```yaml
 type: "FullSlide"
@@ -52,6 +55,7 @@ Here is some text
 import numpy as np
 from sklearn.model_selection import GridSearchCV
 ```
+Here is some more text
 
 
 `@script`
@@ -59,20 +63,34 @@ from sklearn.model_selection import GridSearchCV
 
 
 ---
-## Using GridSearchCV()
+## Setting the Hyperparameters to Use
 
 ```yaml
 type: "TwoRows"
 key: "9ffb5572cc"
 hide_title: false
+code_zoom: 85
 ```
 
 `@part1`
-Text in part 1
+Create arrays of parameters
+```python
+#Regularization Parameter
+C = np.logspace(0, 4, 60)
+#Max Iterations Parameter
+max_iter = [100,200,300]
+#Random State Parameter
+random_state = [0,1,2,3,4]
+```
 
 
 `@part2`
-Text in part 2
+Create a dictionary of the arrays
+```python
+hyperparameters = dict(C = C
+                       ,max_iter = max_iter
+                       ,random_state = random_state)
+```
 
 
 `@script`
@@ -80,15 +98,22 @@ Text in part 2
 
 
 ---
-## Something Else GridSearch
+## Using GridSearch()
 
 ```yaml
 type: "FullSlide"
 key: "95bf2beddc"
+code_zoom: 85
 ```
 
 `@part1`
-
+An Example of the use
+```python
+clf_logistic = GridSearchCV(m_logistic
+                            ,hyperparameters
+                            ,cv=5
+                            ,verbose=0)
+```
 
 
 `@script`
