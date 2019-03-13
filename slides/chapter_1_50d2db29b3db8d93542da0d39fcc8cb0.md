@@ -12,7 +12,7 @@ key: "fc62b4f5d9"
 
 `@lower_third`
 
-name: Mike Crabtree
+name: Michael Crabtree
 title: Data Scientist, Ford Motor Company
 
 
