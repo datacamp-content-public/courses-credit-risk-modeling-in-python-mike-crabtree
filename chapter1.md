@@ -44,7 +44,7 @@ This is an example exercise.
 
 ---
 
-## Insert exercise title here
+## Easy Hyperparameters with GridSearch
 
 ```yaml
 type: VideoExercise
