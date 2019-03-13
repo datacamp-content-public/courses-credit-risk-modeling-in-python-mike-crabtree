@@ -1,4 +1,4 @@
-title: Credit Risk Modeling in Python  Mike Crabtree
+title: Credit Risk Modeling in Python  Michael Crabtree
 description: Course description goes here.
 programming_language: python
-from: python-base-prod:v1.0.2
+from: 'python-base-prod:v1.0.2'
