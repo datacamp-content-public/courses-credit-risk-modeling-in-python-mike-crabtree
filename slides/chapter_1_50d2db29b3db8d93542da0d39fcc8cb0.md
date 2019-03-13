@@ -178,7 +178,7 @@ code_zoom: 85
 ```
 
 `@part1`
-An Example of the use
+Using `GridSearchCV()` with our logistic regression:
 ```python
 clf_logistic = GridSearchCV(m_logistic
                             ,hyperparameters
