@@ -59,7 +59,7 @@ disable_transition: true
 
 
 `@script`
-The first of those simple hyperparameters is going to be C.  C is the parameter which is used for inverse regularization.
+The first of those hyperparameters is going to be C.  C is the parameter which is used for inverse regularization.
 This is a value that is used to help us prevent our model from overfitting to the training set as is the case with most machine learning models.  Remember, the smaller the C value, the stronger the regularization.
 
 
@@ -126,7 +126,7 @@ from sklearn.model_selection import GridSearchCV
 
 
 `@script`
-I've mentioned grid search several times now, but what exactly is it?
+So I've mentioned grid search several times now, but what exactly is it?
 Grid search is a method within Scikit learn which allows us to pass in a machine learning model as well as a dictionary of hyperparameters to figure out which combination of those hyperparameters works best.
 Grid search is able to find the best combination because it will implement both a fit and score method.
 The grid search method is imported from model selection from scikit learn.
@@ -164,8 +164,8 @@ hyperparameters = dict(C = C
 
 
 `@script`
-Now, the first thing I like to do is create some simple arrays of the different values I want grid search to choose from.
-Here, I have created some simple ones for each of the parameters we are going to use: c, max iter, and random state.  One fun thing to note is when establishing a range of c values, it's easy to use the logspace function from numpy to generate a set number of evenly spaced values in the log space.
+Now, the first thing I like to do is create some arrays of the different values I want grid search to choose from.
+Here, I have created some for each of the parameters we are going to use: c, max iter, and random state.  One fun thing to note is when establishing a range of c values, it's easy to use the logspace function from numpy to generate a set number of evenly spaced values in the log space.
 Once all of those are created, we then use the dict() function to create our dictionary of hyperparameters to use in our grid search.
 
 
