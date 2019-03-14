@@ -69,6 +69,7 @@ This is a value that is used to help us prevent our model from overfitting to th
 ```yaml
 type: "FullSlide"
 key: "7b815b8525"
+disable_transition: true
 ```
 
 `@part1`
@@ -81,7 +82,7 @@ key: "7b815b8525"
 
 
 `@script`
-Next is the max iter parameter which is used to control the maximum number of iterations taken for the solvers to converge.  The solver in this case is the lbfgs you see in the code, which represents one of several quasi-Newton methods available to algorithms in Scikit Learn.
+Next is the max iter parameter, which is used to control the maximum number of iterations taken for the solvers to converge.  The solver in this case is the lbfgs you see in the code, which represents one of several quasi-Newton methods available to algorithms in Scikit Learn.
 
 
 ---
@@ -103,7 +104,7 @@ key: "2166e7d1ab"
 
 
 `@script`
-Last, but not least, is the random state parameter.  This is an integer used as a seed for the pseudo random shuffling of the data prior to fitting.  This is not generally used for the lbfgs solver, but it gives us an opportunity to play with searching through more values using gridsearch.
+Last, but not least, is the random state parameter.  This is an integer used as a seed for the pseudo random shuffling of the data prior to fitting.  While this is not generally used for the lbfgs solver, it gives us an opportunity to play with searching through more values using gridsearch.
 
 
 ---
@@ -126,9 +127,9 @@ from sklearn.model_selection import GridSearchCV
 
 `@script`
 I've mentioned grid search several times now, but what exactly is it?
-Grid search is a method within Scikit learn which allows us to pass in a machine learning model as well as a dictionary of parameters to figure out which combination works best.
-It is able to do so, because grid search will implement both a fit and score method.
-The grid search method is generally brought in my importing model selection from scikit learn.
+Grid search is a method within Scikit learn which allows us to pass in a machine learning model as well as a dictionary of parameters to figure out which combination of those parameters works best.
+Grid search is able to find the best combination because it will implement both a fit and score method.
+The grid search method is imported from model selection from scikit learn.
 
 
 ---
@@ -164,12 +165,12 @@ hyperparameters = dict(C = C
 
 `@script`
 Now, the first thing I like to do is create some simple arrays of the different values I want grid search to choose from.
-Here, I have created some simple ones for each of the parameters we are going to use: c, max iter, and random state.  One fun thing to note is when establishing a range of c values, it's easy to use the logspace function from numpy to generate evenly spaced values in the log space.
-Once all of those are created, we can then create our dictionary of hyperparameters to use in our grid search.
+Here, I have created some simple ones for each of the parameters we are going to use: c, max iter, and random state.  One fun thing to note is when establishing a range of c values, it's easy to use the logspace function from numpy to generate a set number of evenly spaced values in the log space.
+Once all of those are created, we then use the dict() function to create our dictionary of hyperparameters to use in our grid search.
 
 
 ---
-## Using GridSearch()
+## Using Grid Search
 
 ```yaml
 type: "FullSlide"
@@ -178,17 +179,22 @@ code_zoom: 85
 ```
 
 `@part1`
-Using `GridSearchCV()` with our logistic regression:
+Implement grid search with our logistic regression using `GridSearchCV()`
 ```python
 clf_logistic = GridSearchCV(m_logistic
                             ,hyperparameters
                             ,cv=5
                             ,verbose=0)
 ```
+| Attributes    |
+| ------------- |
+| `cv_results_`   |
+| `best_estimator_`|
 
 
 `@script`
-
+Now that our dictionary of hyperparameters has been created, we can simply pass them into the GridSearch() function along with: the model, the parameter for cross validation folds, and the verbose option parameter.
+This returns a gridsearch object which has many useful attributes such as: cv results to see things like parameters and metrics for the object, and best estimator to see more details about the model chosen by grid search.  These output a dictionary which can easily be made into a Pandas dataframe for further analysis.
 
 
 ---
@@ -200,5 +206,6 @@ key: "3824076083"
 ```
 
 `@script`
-
+So, we've learned what hyperparameters from the logistic regression we are going to use gridsearch on, how to create the dictionary of those hyperparameters, and implement them using the GridSearch function.
+Now let's go through some programming exercises to use this new skill.  Good luck!
 
