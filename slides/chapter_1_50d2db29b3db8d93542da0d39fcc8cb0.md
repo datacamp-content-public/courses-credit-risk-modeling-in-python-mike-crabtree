@@ -19,7 +19,7 @@ title: Data Scientist, Ford Motor Company
 `@script`
 In the previous exercises, we used a logistic regression to compute probability of default and analyzed the performance.
 We set some of the hyperparameters to specific values, but what if we want to try a range of different values?
-That's where gridsearch comes into play! (15s)
+That's where gridsearch comes into play!
 
 
 ---
@@ -59,7 +59,7 @@ disable_transition: true
 
 
 `@script`
-The first of those simple parameters is going to be C.  C is the parameter which is used for inverse regularization.
+The first of those simple hyperparameters is going to be C.  C is the parameter which is used for inverse regularization.
 This is a value that is used to help us prevent our model from overfitting to the training set as is the case with most machine learning models.  Remember, the smaller the C value, the stronger the regularization.
 
 
@@ -127,7 +127,7 @@ from sklearn.model_selection import GridSearchCV
 
 `@script`
 I've mentioned grid search several times now, but what exactly is it?
-Grid search is a method within Scikit learn which allows us to pass in a machine learning model as well as a dictionary of parameters to figure out which combination of those parameters works best.
+Grid search is a method within Scikit learn which allows us to pass in a machine learning model as well as a dictionary of hyperparameters to figure out which combination of those hyperparameters works best.
 Grid search is able to find the best combination because it will implement both a fit and score method.
 The grid search method is imported from model selection from scikit learn.
 
@@ -206,6 +206,6 @@ key: "3824076083"
 ```
 
 `@script`
-So, we've learned what hyperparameters from the logistic regression we are going to use gridsearch on, how to create the dictionary of those hyperparameters, and implement them using the GridSearch function.
+So, we've learned: what hyperparameters from the logistic regression we are going to use gridsearch on, how to create the dictionary of those hyperparameters, and implement them using the GridSearch function.
 Now let's go through some programming exercises to use this new skill.  Good luck!
 
