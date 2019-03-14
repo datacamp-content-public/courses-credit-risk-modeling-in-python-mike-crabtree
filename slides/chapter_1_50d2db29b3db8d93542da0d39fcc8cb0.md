@@ -82,7 +82,7 @@ disable_transition: true
 
 
 `@script`
-Next is the max iter parameter, which is used to control the maximum number of iterations taken for the solvers to converge.  The solver in this case is the lbfgs you see in the code, which represents one of several quasi-Newton methods available to algorithms in Scikit Learn.
+Next is the max iter parameter, which is used to control the maximum number of iterations taken for the solvers to converge.  The solver in this case is the lbfgs you see in the code.
 
 
 ---
