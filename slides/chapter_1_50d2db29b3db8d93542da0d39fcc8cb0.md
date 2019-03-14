@@ -37,7 +37,7 @@ disable_transition: true
 
 
 `@script`
-Here is an example of a logistic regression in Python using ScikitLearn like we used in previous exercises.
+Here is an example of a logistic regression in Python using ScikitLearn complete with some set hyperparameters.
 While not all hyperparameters are good candidates for grid search, we can use a set of simple ones to help us optimize the performance of our model.
 
 
@@ -164,7 +164,7 @@ hyperparameters = dict(C = C
 
 
 `@script`
-Now, the first thing I like to do is create some arrays of the different values I want grid search to choose from.
+The first thing I like to do is create some arrays of the different values I want grid search to choose from.
 Here, I have created some for each of the parameters we are going to use: c, max iter, and random state.  One fun thing to note is when establishing a range of c values, it's easy to use the logspace function from numpy to generate a set number of evenly spaced values in the log space.
 Once all of those are created, we then use the dict() function to create our dictionary of hyperparameters to use in our grid search.
 
