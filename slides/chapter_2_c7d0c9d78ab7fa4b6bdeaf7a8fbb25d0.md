@@ -74,6 +74,7 @@ key: "5fac3bfd84"
 - Most common algorithm used for predicting probability of default (PD)
 - Produces decimal values associated with the probability of a predicted class
 - Graph with classes (showing different colors as an example)
+- Next slide has annotated graph showing the different classes
 
 
 `@script`
@@ -92,7 +93,25 @@ key: "9682da0499"
 - What is PD
 - Why PD is used
 - It's impact (number of loans, loss at default, etc)
-- Curve showing risk and population
+- Curve showing risk and population (strategy)
+
+
+`@script`
+
+
+
+---
+## Risk Scorecards
+
+```yaml
+type: "FullSlide"
+key: "e469892004"
+```
+
+`@part1`
+- PD part in scorecarding
+- Talk about the risk over time (point of time considered for this class)
+- Example picture of a scorecard (simple Pandas example?)
 
 
 `@script`
