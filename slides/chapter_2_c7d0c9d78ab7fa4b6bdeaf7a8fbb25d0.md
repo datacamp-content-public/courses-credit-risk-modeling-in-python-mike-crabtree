@@ -70,25 +70,6 @@ array([[9.812e-01, 3.021e-02]])
 
 
 ---
-## Prepare Data for Logistic Regression
-
-```yaml
-type: "FullSlide"
-key: "c1d32f831d"
-```
-
-`@part1`
-- Test/train split
-- Discretizing Features
-- One hot encoding
-- Code snippet
-
-
-`@script`
-
-
-
----
 ## Logistic Regression for Credit Risk
 
 ```yaml
@@ -97,10 +78,11 @@ key: "5fac3bfd84"
 ```
 
 `@part1`
-- Most common algorithm used for predicting probability of default (PD)
-- Produces decimal values associated with the probability of a predicted class
-- Graph with classes (showing different colors as an example)
-- Next slide has annotated graph showing the different classes
+- Common algorithm used for predicting **probability of default** (PD)
+- Predicted probabilities are easy to interpret and track over time{{2}}
+  - Scorecard development
+  - Roll rate analysis (ex: days past due)
+  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II)
 
 
 `@script`
@@ -116,8 +98,8 @@ key: "9682da0499"
 ```
 
 `@part1`
-- What is PD.  The estimated probability that the recipient of the loan will fail to repay the agreed amount.
-- Why PD is used.  Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
+- The estimated probability that the recipient of the loan will fail to repay the agreed amount.
+- Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
 - It's impact (number of loans, loss at default, etc)
 - Curve showing risk and population (strategy)
 
@@ -142,6 +124,25 @@ key: "29ec076675"
 `@part2`
 - It's impact (number of loans, loss at default, etc)
 - Curve showing risk and population (strategy)
+
+
+`@script`
+
+
+
+---
+## Prepare Data for Logistic Regression
+
+```yaml
+type: "FullSlide"
+key: "c1d32f831d"
+```
+
+`@part1`
+1. Discretizing Features
+2. One hot encoding
+3. Test/train split
+4. Code snippet
 
 
 `@script`
