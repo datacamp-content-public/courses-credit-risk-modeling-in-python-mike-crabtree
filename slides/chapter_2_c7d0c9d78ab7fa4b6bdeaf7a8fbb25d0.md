@@ -55,7 +55,7 @@ code_zoom: 85
 ```python
 from sklearn.linear_model import LogisticRegression
 clf = LogisiticRegression()
-```
+```{{2}}
 
 
 `@script`
