@@ -91,6 +91,7 @@ Next is the max iter parameter, which is used to control the maximum number of i
 ```yaml
 type: "FullSlide"
 key: "2166e7d1ab"
+disable_transition: true
 ```
 
 `@part1`

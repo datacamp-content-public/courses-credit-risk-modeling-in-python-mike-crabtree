@@ -1,5 +1,5 @@
 ---
-title: 'Chapter Title Here'
+title: 'Chapter 1 - Data Preprocessing and Exploration'
 description: 'Chapter description goes here.'
 free_preview: true
 ---
@@ -44,7 +44,7 @@ This is an example exercise.
 
 ---
 
-## Easy Hyperparameters with GridSearch
+## 2.4 Easy Hyperparameters with GridSearch
 
 ```yaml
 type: VideoExercise
