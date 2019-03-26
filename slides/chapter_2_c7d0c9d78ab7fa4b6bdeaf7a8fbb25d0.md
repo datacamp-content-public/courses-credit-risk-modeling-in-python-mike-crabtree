@@ -72,7 +72,9 @@ key: "c1d32f831d"
 
 `@part1`
 - Test/train split
--
+- Discretizing Features
+- One hot encoding
+- Code snippet
 
 
 `@script`
