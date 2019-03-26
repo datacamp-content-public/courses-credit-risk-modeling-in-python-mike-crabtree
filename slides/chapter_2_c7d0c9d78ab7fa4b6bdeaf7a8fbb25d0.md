@@ -50,12 +50,19 @@ code_zoom: 85
 
 `@part1`
 - Classification algorithm used to predict probability of a class
-- Produces decimal values associated with the probability of a predicted class
-
 ```python
 from sklearn.linear_model import LogisticRegression
-clf = LogisiticRegression()
+clf = LogisticRegression(random_state = 0
+                         ,solver = 'lbfgs'
+                         ,multi_class = 'auto'
+                         ,max_iter = 150)
 ```{{2}}
+
+- Produces decimal values associated with the probability of a predicted class{{3}}
+
+```python
+array([0.96])
+```{{4}}
 
 
 `@script`
