@@ -61,7 +61,7 @@ clf = LogisticRegression(random_state = 0
 - Produces decimal values associated with the probability of a predicted class{{3}}
 
 ```python
-array([0.96])
+array([[9.812e-01, 3.021e-02]])
 ```{{4}}
 
 
