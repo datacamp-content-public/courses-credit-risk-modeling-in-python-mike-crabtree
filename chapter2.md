@@ -3,7 +3,7 @@ title: 'Chapter 2 - Logistic Regression'
 description: ""
 ---
 
-## 2.4.1 Easy Hyperparameters with GridSearch
+## Easy Hyperparameters with GridSearch
 
 ```yaml
 type: VideoExercise
