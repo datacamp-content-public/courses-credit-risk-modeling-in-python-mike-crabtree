@@ -63,6 +63,23 @@ clf = LogisiticRegression()
 
 
 ---
+## Prepare Data for Logistic Regression
+
+```yaml
+type: "FullSlide"
+key: "c1d32f831d"
+```
+
+`@part1`
+- Test/train split
+-
+
+
+`@script`
+
+
+
+---
 ## Logistic Regression for Credit Risk
 
 ```yaml
@@ -90,8 +107,8 @@ key: "9682da0499"
 ```
 
 `@part1`
-- What is PD
-- Why PD is used
+- What is PD.  The estimated probability that the recipient of the loan will fail to repay the agreed amount.
+- Why PD is used.  Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
 - It's impact (number of loans, loss at default, etc)
 - Curve showing risk and population (strategy)
 
@@ -101,17 +118,21 @@ key: "9682da0499"
 
 
 ---
-## Risk Scorecards
+## Probability of Default
 
 ```yaml
-type: "FullSlide"
-key: "e469892004"
+type: "TwoColumns"
+key: "29ec076675"
 ```
 
 `@part1`
-- PD part in scorecarding
-- Talk about the risk over time (point of time considered for this class)
-- Example picture of a scorecard (simple Pandas example?)
+- What is PD.  The estimated probability that the recipient of the loan will fail to repay the agreed amount.
+- Why PD is used.  Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
+
+
+`@part2`
+- It's impact (number of loans, loss at default, etc)
+- Curve showing risk and population (strategy)
 
 
 `@script`
