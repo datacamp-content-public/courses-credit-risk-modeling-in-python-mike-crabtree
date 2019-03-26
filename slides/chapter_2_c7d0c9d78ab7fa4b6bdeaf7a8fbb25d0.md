@@ -73,6 +73,43 @@ key: "5fac3bfd84"
 `@part1`
 - Most common algorithm used for predicting probability of default (PD)
 - Produces decimal values associated with the probability of a predicted class
+- Graph with classes (showing different colors as an example)
+
+
+`@script`
+
+
+
+---
+## Probability of Default
+
+```yaml
+type: "FullSlide"
+key: "9682da0499"
+```
+
+`@part1`
+- What is PD
+- Why PD is used
+- It's impact (number of loans, loss at default, etc)
+- Curve showing risk and population
+
+
+`@script`
+
+
+
+---
+## Logistic Regression PD Example
+
+```yaml
+type: "FullSlide"
+key: "6365c4f112"
+```
+
+`@part1`
+- Code snippet example
+- Output explanation
 
 
 `@script`
