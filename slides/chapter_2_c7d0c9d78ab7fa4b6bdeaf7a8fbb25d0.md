@@ -58,31 +58,11 @@ clf = LogisticRegression(random_state = 0
                          ,max_iter = 150)
 ```{{2}}
 
-- Produces decimal values associated with the probability of a predicted class{{3}}
+- Produces decimal values for the probability of a predicted class.  In this case, its `loan_status` of Default/Non-default{{3}}
 
 ```python
 array([[9.812e-01, 3.021e-02]])
 ```{{4}}
-
-
-`@script`
-
-
-
----
-## Logistic Regression for Credit Risk
-
-```yaml
-type: "FullSlide"
-key: "5fac3bfd84"
-```
-
-`@part1`
-- Common algorithm used for predicting **probability of default** (PD)
-- Predicted probabilities are easy to interpret and track over time{{2}}
-  - Scorecard development
-  - Roll rate analysis (ex: days past due)
-  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II)
 
 
 `@script`
@@ -102,6 +82,31 @@ key: "9682da0499"
 - Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
 - It's impact (number of loans, loss at default, etc)
 - Curve showing risk and population (strategy)
+
+
+`@script`
+
+
+
+---
+## Logistic Regression for Credit Risk
+
+```yaml
+type: "FullSlide"
+key: "5fac3bfd84"
+```
+
+`@part1`
+- Common algorithm used for predicting **probability of default** (PD)
+- Predicted probabilities are easy to interpret and track over time{{2}}
+  - Scorecard development
+  - Roll rate analysis (ex: days past due)
+  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II) 
+ 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
 
 
 `@script`
