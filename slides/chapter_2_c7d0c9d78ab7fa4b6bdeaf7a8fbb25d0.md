@@ -58,7 +58,7 @@ clf = LogisticRegression(random_state = 0
                          ,max_iter = 150)
 ```{{2}}
 
-- Produces decimal values for the probability of a predicted class.  In this case, its `loan_status` of Default/Non-default{{3}}
+- Produces decimal values for the probability of a predicted class.  In this case, `loan_status` of Default or Non-default (1 or 0){{3}}
 
 ```python
 array([[9.812e-01, 3.021e-02]])
@@ -75,13 +75,32 @@ array([[9.812e-01, 3.021e-02]])
 ```yaml
 type: "FullSlide"
 key: "9682da0499"
+disable_transition: true
 ```
 
 `@part1`
 - The estimated probability that the recipient of the loan will fail to repay the agreed amount.
+- One of three primary credit risk components:{{2}}
+  1. **Probability of Default**
+  2. Loss Given Default
+  3. Exposure at Default
+
+
+`@script`
+
+
+
+---
+## Probability of Default
+
+```yaml
+type: "FullSlide"
+key: "17a50ee2a2"
+disable_transition: true
+```
+
+`@part1`
 - Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
-- It's impact (number of loans, loss at default, etc)
-- Curve showing risk and population (strategy)
 
 
 `@script`
@@ -98,15 +117,11 @@ key: "5fac3bfd84"
 
 `@part1`
 - Common algorithm used for predicting **probability of default** (PD)
+
 - Predicted probabilities are easy to interpret and track over time{{2}}
   - Scorecard development
   - Roll rate analysis (ex: days past due)
-  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II) 
- 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
+  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II)
 
 
 `@script`
