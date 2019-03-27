@@ -213,6 +213,6 @@ key: "c3ea249b6d"
 ```
 
 `@script`
-So what we covered in this lesson is: the definition of a logistic regression, the definition for probability of default or PD for short, why PD is important to the overall analysis of credit risk, and finally how to set up and implement a logistic regression model whose target is probability of default.
+So what we covered in this lesson is: the definition of a logistic regression, the definition for probability of default, why probability of default is important to the overall analysis of credit risk, and finally how to set up and implement a logistic regression.
 Let's hop over to some programming exercises and use our new set of skills!
 
