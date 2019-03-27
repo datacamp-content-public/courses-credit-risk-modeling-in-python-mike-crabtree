@@ -17,7 +17,7 @@ title: Data Scientist, Ford Motor Company
 
 
 `@script`
-
+In this chapter, we are going to focus on using a logistic regression model to predict probability of default.  Let's discuss this further to find out why we use this model, and how to implement it in practice.
 
 
 ---
@@ -47,7 +47,9 @@ array([[9.812e-01, 3.021e-02]])
 
 
 `@script`
-
+A logistic regression model is used to predict class probabilities for a given target in the data.
+Here we can see a simple implementation of a logistic regression model in python.  This model is easily imported from scikit-learn, and contains several parameters we will discuss later.
+Also, note that the results of the models we will use will give us the probability of default for a given loan.  These will be represented as arrays of decimal values as seen here.
 
 
 ---
@@ -62,13 +64,17 @@ disable_transition: true
 `@part1`
 - The estimated probability that the recipient of the loan will fail to repay the agreed amount.
 - One of three primary credit risk components:{{2}}
-  1. **Probability of Default (PD)**{{3}}
+  1. **Probability of Default (PD)**{{2}}
   2. Loss Given Default (LGD){{4}}
   3. Exposure at Default (EAD){{5}}
 
 
 `@script`
-
+The probability of default for a loan is how likely we estimate the recipient of the loan will fail to pay back the amount he or she borrowed.
+Probability of default is one of the three primary components in most risk modeling analytics.  
+Second is the loss given default, which is the ratio of the loss upon default to the amount outstanding.
+And the third component is the exposure at default, which is just the outstanding principle.
+For now, we will focus on the probability of default alone.
 
 
 ---
