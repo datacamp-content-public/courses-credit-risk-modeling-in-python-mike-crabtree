@@ -101,12 +101,12 @@ key: "5fac3bfd84"
 `@part1`
 - The most common algorithm used for predicting **probability of default** (PD)
 
-- This course focuses on **logit** (or log-odds) probabilities{{2}}
-
-- Predicted probabilities are easy to interpret and track over time:{{3}}
+- Predicted probabilities are easy to interpret and track over time:{{2}}
   - Scorecard development
   - Roll rate analysis (ex: calculating % of accounts whose deliquency got better/worse)
-  - Vintage analysis (ex: probability of 90 Days Past Due in next 12 months)
+  - Vintage analysis (ex: probability of 90 Days Past Due in next 12 months) 
+  
+ - This course focuses on **logit** (or log-odds) probabilities{{3}}
 
 
 `@script`
@@ -123,17 +123,72 @@ code_zoom: 85
 ```
 
 `@part1`
-1. Discretize Features with `pd.cut()`
+- Discretize Features with `cut()`
+
 ```python
 bins = [0,35000,60000,100000]
 credit_loan_data['inc_bucket'] = pd.cut(
   credit_loan_data['person_income']
   ,bins)
+```{{2}}
+
+- Creates a new feature vector that has discretized the income values into buckets{{3}}
+
+
+`@script`
+
+
+
+---
+## Prepare Data for Logistic Regression
+
+```yaml
+type: "FullSlide"
+key: "76cc3b610a"
+code_zoom: 85
 ```
 
+`@part1`
+- One-hot encoding with `get_dummies()`
 
-2. One-hot encoding
-3. Test/train split
+```python
+pd.get_dummies(credit_loan_data['loan_intent'])
+```{{2}}
+
+- Splits a categorical feature into numeric vectors where the value is 1 if the row contained that value{{3}}
+
+![](https://assets.datacamp.com/production/repositories/4760/datasets/0fcb85bd997558a17e28ae3283a7d7f01b73fc99/one_hot_example.PNG){{3}}
+
+
+`@script`
+
+
+
+---
+## Prepare Data for Logistic Regression
+
+```yaml
+type: "FullSlide"
+key: "2a2be2a979"
+```
+
+`@part1`
+- Split data into train/test sets
+
+
+`@script`
+
+
+
+---
+## Prepare Data for Logistic Regression
+
+```yaml
+type: "FullSlide"
+key: "4d264f5633"
+```
+
+`@part1`
 4. Code snippet
 
 
