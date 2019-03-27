@@ -43,13 +43,13 @@ clf = LogisticRegression(random_state = 0
 
 ```python
 array([[9.812e-01, 3.021e-02]])
-```{{4}}
+```{{3}}
 
 
 `@script`
 A logistic regression model is used to predict class probabilities for a given target in the data.
-Here we can see a simple implementation of a logistic regression model in python.  This model is easily imported from scikit-learn, and contains several parameters we will discuss later.
-Also, note that the results of the models we will use will give us the probability of default for a given loan.  These will be represented as arrays of decimal values as seen here.
+Here we can see a simple implementation of a logistic regression model in python.  This example contains some parameters we will discuss later.
+The results of the model we will use will give us the probability of default for a given loan.  These will be represented as arrays of decimal values.
 
 
 ---
@@ -70,11 +70,11 @@ disable_transition: true
 
 
 `@script`
-The probability of default for a loan is how likely we estimate the recipient of the loan will fail to pay back the amount he or she borrowed.
+The probability of default for a loan is our estimated probability for how likely the recipient is to default on the loan.
 Probability of default is one of the three primary components in most risk modeling analytics.  
 Second is the loss given default, which is the ratio of the loss upon default to the amount outstanding.
 And the third component is the exposure at default, which is just the outstanding principle.
-For now, we will focus on the probability of default alone.
+For now, we will focus on the probability of default.
 
 
 ---
@@ -142,11 +142,11 @@ credit_loan_data['inc_bucket'] = pd.cut(
   ,bins)
 ```{{2}}
 
-- Creates a new feature vector that has discretized the income values into buckets{{3}}
+- Creates a new feature vector that has discretized the income values into buckets{{2}}
 
 
 `@script`
-
+As we prepare our data for modeling, we are going to first discretize some of our continuous features into buckets.  Some of these might have heavily skewed distributions, so we are going to bucket them to make things easier
 
 
 ---
@@ -171,7 +171,7 @@ pd.get_dummies(credit_loan_data['loan_intent'])
 
 
 `@script`
-
+Next, we are going to use pandas to perform one-hot encoding on our categorical features.  Unlike in R, the logistic regression model in Python does not do this automatically, and we have to do it ourselves before.
 
 
 ---
@@ -197,35 +197,11 @@ y = credit_loan_data[['loan_status']]
 ```python
 X_train, X_test, y_train, y_test = \
 	train_test_split(X, y, test_size=.4,random_state=123)
-```{{3}}
+```{{2}}
 
 
 `@script`
-
-
-
----
-## Implementing Logistic Regression
-
-```yaml
-type: "FullSlide"
-key: "6365c4f112"
-code_zoom: 85
-```
-
-`@part1`
-- Instantiate a logistic regression classifier
-- Train the model on our new training data sets{{2}}
-
-```python
-clf = LogisticRegression(random_state=0, solver='lbfgs'
-                         ,multi_class='auto')
-fit = clf.fit(X_train, y_train)
-```{{3}}
-
-
-`@script`
-
+Finally, we will split our data into training and test sets with scikit-learn with a few lines of code.  In this example, I have chosen a 60/40 split for the data.
 
 
 ---
