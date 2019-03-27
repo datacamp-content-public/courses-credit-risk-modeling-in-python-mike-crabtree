@@ -21,25 +21,6 @@ title: Data Scientist, Ford Motor Company
 
 
 ---
-## Outline
-
-```yaml
-type: "FullSlide"
-key: "20c291a668"
-```
-
-`@part1`
-- Introduce logistic regression
-- Mention that it's often used for predicting PD
-- Introduce why PD is used and what it impacts
-- Short demo of logistic regression in python (code snippet)
-
-
-`@script`
-
-
-
----
 ## Logistic Regression in Python
 
 ```yaml
@@ -58,7 +39,7 @@ clf = LogisticRegression(random_state = 0
                          ,max_iter = 150)
 ```{{2}}
 
-- Produces decimal values for the probability of a predicted class.  In this case, `loan_status` of Default or Non-default (1 or 0){{3}}
+- Produces decimal values for the probability of a predicted class.  In this case, `loan_status` for **probability of default** {{3}}
 
 ```python
 array([[9.812e-01, 3.021e-02]])
@@ -81,9 +62,9 @@ disable_transition: true
 `@part1`
 - The estimated probability that the recipient of the loan will fail to repay the agreed amount.
 - One of three primary credit risk components:{{2}}
-  1. **Probability of Default**
-  2. Loss Given Default
-  3. Exposure at Default
+  1. **Probability of Default (PD)**{{3}}
+  2. Loss Given Default (LGD){{4}}
+  3. Exposure at Default (EAD){{5}}
 
 
 `@script`
@@ -100,7 +81,7 @@ disable_transition: true
 ```
 
 `@part1`
-- Probability of default at a point in time is used to help a lending agency develop a strategy and set aside provisions for expected loss
+- Probability of default at a point in time is used to help a lending agency develop a strategy and set aside provisions for **expected loss**
 
 ![](https://assets.datacamp.com/production/repositories/4760/datasets/50355cebe2f6d9b3b147a93fd51c6bbf5fae7dd9/Expected_Loss_Curve.jpg){{2}}
 
@@ -118,36 +99,14 @@ key: "5fac3bfd84"
 ```
 
 `@part1`
-- Common algorithm used for predicting **probability of default** (PD)
+- The most common algorithm used for predicting **probability of default** (PD)
 
-- Predicted probabilities are easy to interpret and track over time{{2}}
+- This course focuses on **logit** (or log-odds) probabilities{{2}}
+
+- Predicted probabilities are easy to interpret and track over time:{{3}}
   - Scorecard development
-  - Roll rate analysis (ex: days past due)
-  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II) 
-
-- This course focuses on logit probabilities{{3}}
-
-
-`@script`
-
-
-
----
-## Probability of Default
-
-```yaml
-type: "TwoColumns"
-key: "29ec076675"
-```
-
-`@part1`
-- What is PD.  The estimated probability that the recipient of the loan will fail to repay the agreed amount.
-- Why PD is used.  Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
-
-
-`@part2`
-- It's impact (number of loans, loss at default, etc)
-- Curve showing risk and population (strategy)
+  - Roll rate analysis (ex: calculating % of accounts whose deliquency got better/worse)
+  - Vintage analysis (ex: probability of 90 Days Past Due in next 12 months)
 
 
 `@script`
@@ -160,11 +119,20 @@ key: "29ec076675"
 ```yaml
 type: "FullSlide"
 key: "c1d32f831d"
+code_zoom: 85
 ```
 
 `@part1`
-1. Discretizing Features
-2. One hot encoding
+1. Discretize Features with `pd.cut()`
+```python
+bins = [0,35000,60000,100000]
+credit_loan_data['inc_bucket'] = pd.cut(
+  credit_loan_data['person_income']
+  ,bins)
+```
+
+
+2. One-hot encoding
 3. Test/train split
 4. Code snippet
 
