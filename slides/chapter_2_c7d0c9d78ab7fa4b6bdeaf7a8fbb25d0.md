@@ -48,7 +48,7 @@ array([[9.812e-01, 3.021e-02]])
 
 `@script`
 A logistic regression model is used to predict class probabilities for a given target in the data.
-Here we can see a simple implementation of a logistic regression model in python.  This example contains some parameters we will discuss later.
+Here we can see a simple implementation of a logistic regression model in python.  This example contains some parameters we will discuss later.  For now, we will focus on using the model in general.
 The results of the model we will use will give us the probability of default for a given loan.  These will be represented as arrays of decimal values.
 
 
@@ -118,8 +118,8 @@ key: "5fac3bfd84"
 
 
 `@script`
-When estimating the probability of default, the most often used algorithm is the logistic regression.
-Some reasons why this has been so popular for so long is the model and it's results are easy to interpret and implement.  These can easily be used to scorecard development, roll rate analysis, and vintage analysis in the future.
+When estimating the probability of default, the most popular algorithm is the logistic regression.
+Some reasons why this has been so popular for so long is the model and it's results are easy to interpret and implement.  These can easily be used for scorecard development, roll rate analysis, and vintage analysis in the future.
 Keep in mind that during this course, for simplicity, we will focus only on logit probabilities.
 
 
@@ -201,7 +201,7 @@ X_train, X_test, y_train, y_test = \
 
 
 `@script`
-Finally, we will split our data into training and test sets with scikit-learn with a few lines of code.  In this example, I have chosen a 60/40 split for the data.
+Finally, we will split our data into training and test sets with scikit-learn in only a few lines of code.  In this example, I have chosen a 60/40 split for the data.
 
 
 ---
