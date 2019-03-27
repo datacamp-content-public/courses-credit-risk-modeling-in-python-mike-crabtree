@@ -100,7 +100,9 @@ disable_transition: true
 ```
 
 `@part1`
-- Probability of default at a point in time and over time are used to help a lending agency develop a strategy and set aside provisions for expected loss (given default)
+- Probability of default at a point in time is used to help a lending agency develop a strategy and set aside provisions for expected loss
+
+![](https://assets.datacamp.com/production/repositories/4760/datasets/50355cebe2f6d9b3b147a93fd51c6bbf5fae7dd9/Expected_Loss_Curve.jpg){{2}}
 
 
 `@script`
@@ -121,7 +123,9 @@ key: "5fac3bfd84"
 - Predicted probabilities are easy to interpret and track over time{{2}}
   - Scorecard development
   - Roll rate analysis (ex: days past due)
-  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II)
+  - Vintage analysis (ex: probability of 90 DPD in next 12m, Basel II) 
+
+- This course focuses on logit probabilities{{3}}
 
 
 `@script`
