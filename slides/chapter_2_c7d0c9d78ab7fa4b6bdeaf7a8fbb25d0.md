@@ -171,7 +171,7 @@ pd.get_dummies(credit_loan_data['loan_intent'])
 
 
 `@script`
-Next, we are going to use pandas to perform one-hot encoding on our categorical features.  Unlike in R, the logistic regression model in Python does not do this automatically, and we have to do it ourselves before.
+Next, we are going to perform one-hot encoding on our categorical features.  Unlike in R, the logistic regression model in Python does not do this automatically.  So, we have to do it ourselves.
 
 
 ---
