@@ -170,10 +170,24 @@ pd.get_dummies(credit_loan_data['loan_intent'])
 ```yaml
 type: "FullSlide"
 key: "2a2be2a979"
+code_zoom: 85
 ```
 
 `@part1`
-- Split data into train/test sets
+- Split data into train/test sets with `train_test_split()`
+
+```python
+X = credit_loan_data[['person_income'
+                      ,'person_home_ownership'
+                      ,'loan_intent'
+                      ,'loan_amnt']]
+y = credit_loan_data[['loan_status']]
+```{{2}}
+
+```python
+X_train, X_test, y_train, y_test = \
+	train_test_split(X, y, test_size=.4,random_state=123)
+```{{3}}
 
 
 `@script`
@@ -181,32 +195,23 @@ key: "2a2be2a979"
 
 
 ---
-## Prepare Data for Logistic Regression
-
-```yaml
-type: "FullSlide"
-key: "4d264f5633"
-```
-
-`@part1`
-4. Code snippet
-
-
-`@script`
-
-
-
----
-## Logistic Regression PD Example
+## Implementing Logistic Regression
 
 ```yaml
 type: "FullSlide"
 key: "6365c4f112"
+code_zoom: 85
 ```
 
 `@part1`
-- Code snippet example
-- Output explanation
+- Instantiate a logistic regression classifier
+- Train the model on our new training data sets{{2}}
+
+```python
+clf = LogisticRegression(random_state=0, solver='lbfgs'
+                         ,multi_class='auto')
+fit = clf.fit(X_train, y_train)
+```{{3}}
 
 
 `@script`
