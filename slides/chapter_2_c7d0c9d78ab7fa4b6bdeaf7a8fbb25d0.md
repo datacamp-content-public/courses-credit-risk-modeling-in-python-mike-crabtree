@@ -93,9 +93,9 @@ disable_transition: true
 
 
 `@script`
-The reason why probability of default is a primary component is it allows us to develop a lending strategy sufficient to set aside provisions for losses we expect to take just by doing business.
-Have a look at this diagram of possible losses based on the Basel II recommendations for our agency's strategy.  The probability of default from our predictions will allow us to anticipate each group of losses and plot this curve more accurately.
-The line between expected and unexpected losses is a concept we will explore more in a later lesson.  For now, just think about how our predictions are foundational to our overall lending strategy.
+Our focus on probability of default is primarily because it allows us to develop a lending strategy sufficient to set aside provisions for losses we expect to take just by doing business.
+Have a look at this diagram of possible losses.  The probability of default from our predictions will allow us to anticipate each group of losses and plot this curve more accurately.
+The line between expected and unexpected losses is a cutoff value concept we will explore more in a later lesson.  For now, just think about how our predictions are foundational to our overall lending strategy.
 
 
 ---
@@ -114,12 +114,12 @@ key: "5fac3bfd84"
   - Roll rate analysis (ex: calculating % of accounts whose deliquency got better/worse)
   - Vintage analysis (ex: probability of 90 Days Past Due in next 12 months) 
   
- - This course focuses on **logit** (or log-odds) probabilities{{3}}
+- This course focuses on **logit** (or log-odds) probabilities{{3}}
 
 
 `@script`
 When estimating the probability of default, the most often used algorithm is the logistic regression.
-Some reasons why this has been so popular for so long is the model and it's results are easy to interpret and implement over time.  These can easily be used to scorecard development, roll rate analysis, and vintage analysis as we store more data on each loan.
+Some reasons why this has been so popular for so long is the model and it's results are easy to interpret and implement.  These can easily be used to scorecard development, roll rate analysis, and vintage analysis in the future.
 Keep in mind that during this course, for simplicity, we will focus only on logit probabilities.
 
 
