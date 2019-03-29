@@ -17,7 +17,7 @@ skills: 2
 This is an example exercise.
 
 `@instructions`
-
+test
 
 `@hint`
 
