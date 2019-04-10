@@ -102,6 +102,23 @@ Example verbs: Arrange, List, Match, Recognize, Recall, State, Select
 
 ### 3. Technologies - What technologies, packages, or functions will students use?
 
+#### Pandas
+* Functions: crosstab(), head(), tail(), drop(), replace(), subset(), sample(), apply()
+
+#### Matplotlib
+* Functions: hist(), scatterplot(), boxplot(), bar()
+
+#### Scikit-learn
+* Functions: LogisticRegression(), get_params(), summary(), predict_proba(), score(), classification_report(), calibration_curve(), fit(), roc_auc_score(), roc_curve()
+
+#### XGBoost
+* XGBClassifier(), predict(), cv(), 
+
+#### Numpy
+
+* Functions: quantile(), sum()
+
+
 ### 4. Jargon - What terms or jargon will you define?
 
 ### 5. Analogies - What analogies or heuristics will you use?
