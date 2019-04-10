@@ -48,6 +48,58 @@
 
 ### 2. Learning Objectives - What techniques/concepts will students learn?
 
+#### Creating
+Example verbs: Arrange, Assemble, Compose, Combine, Construct, Develop, Formulate, Integrate, Make, Organize, Set up
+
+* Develop logistic regression and GBT machine learning models
+* Integrate different hyperparameters into each model
+* Combine different sets of features into new machine learning models
+* Formulate a strategy for the financial performance of the firm
+* Integrate a chosen machine learning model into the strategy for the firm
+
+#### Evaluating
+Example verbs: Appraise, Assess, Choose, Compare, Conclude, Decide, Discriminate, Evaluate, Interpret, Measure, Select, Summarize, Test
+
+* Compare and contrast different machine learning models for probability of default
+* Evaluate the performance of the machine learning models
+* Interpret the structure of logistic regression and GBT models
+* Select feature sets for optimal prediction performance
+* Select a machine learning model based on performance on probability of default with a test set
+
+#### Analyzing
+Example verbs: Analyze, Calculate, Classify, Compare, Connect, Contraste, Differentiate, Examine, Infer, Outline
+
+* Interpret probability of default predictions from machine learning models
+* Compare the performance of different machine learning models for probability of default
+* Interpret visualizations regarding classification model performance
+* Classify loans based on probability of default
+* Differentiate between logistic regression model structure and GBT model structure
+* Calculate fiancial metrics like exposure at default, expected value, and loss given default
+
+#### Applying
+Example verbs: Apply, Calculate, Examine, Experiment, Illustrate, Interpret, Modify, Prepare, Produce, Relate, Solve, Use
+
+* Calculate loss given default for a loan portfolio
+* Calculate exposure at default for a set of loans in a portfolio
+* Experiment with different machine learning models for probability of default
+* Modify existing machine learning models to improve performance on probability of default
+
+#### Understanding
+Example verbs: Compare, Contrast, Describe, Differentiate, Understand, Estimate, Summarize, Review
+
+* Understand the impact of class imbalance on machine learning model training
+* Understand the importance of minimizing exposure at default for a portfolio of loans
+* Summarize the impact of different machine learning models on financial performance
+* Estimate the overall impact of model performance on the firm's strategy
+* Review machine learning model results
+
+#### Remembering
+Example verbs: Arrange, List, Match, Recognize, Recall, State, Select
+
+* Recall financial concepts like expected value and probability of default
+* Recognize the chosen model and it's impact on the financial performance of the firm
+* Select machine learning models based on performance for probability of default
+
 ### 3. Technologies - What technologies, packages, or functions will students use?
 
 ### 4. Jargon - What terms or jargon will you define?
